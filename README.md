@@ -2,7 +2,22 @@
 
 ## Passo a passo:
 
-Para iniciar o projeto, basta executar o comando:
+Para iniciar o projeto, você precisa do Docker e docker-compose instalados.
+Versões do meu docker:
+
+```sh
+docker -v                            
+Docker version 24.0.7, build afdd53b
+````
+
+```sh
+docker-compose --version
+Docker Compose version v2.23.0
+```
+
+----
+
+Com o docker instalado, basta executar o comando:
 
 ```sh
 chmod +x ./init.sh && ./init.sh

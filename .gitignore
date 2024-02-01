@@ -1,12 +1,12 @@
 # next.js
 /catho-portal/.next/
 /catho-portal/node_modules/
-/catho-portal/.env/
+/catho-portal/.env
 
 # nest.js
 /catho-back/dist/
 /catho-back/node_modules/
-/catho-back/.env/
+/catho-back/.env
 
 # ide
 .idea
