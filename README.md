@@ -33,6 +33,24 @@ O portal (NextJS) está rodando na porta 3000
 
 O back (NestJS) está rodando na porta 3001
 
+## Obs
+
+O servidor está com um rateLimiter de 10 requisições por minuto, caso queira alterar, o limiter está localizado no arquivo:
+
+```
+   catho-back/src/app.module.ts
+```
+
+```js
+   ThrottlerModule.forRoot([
+      {
+        name: 'default',
+        ttl: 60000, //1s
+        limit: 10, //altere o limite aqui
+      },
+    ]),
+```
+
 ## Tests
 
 Os testes do back estão localizados neste path:
