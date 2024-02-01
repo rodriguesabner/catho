@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - '27017:27017'
+    networks:
+      - app-network
+    volumes:
+      - mongodb_data:/data/db
+    env_file:
+      - .env
+
+  nestjs:
+    build: ./catho-back
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+    env_file:
+      - .env
+
+  nextjs:
+    build: ./catho-portal
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+    env_file:
+      - .env
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
