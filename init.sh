@@ -23,3 +23,6 @@ if [[ $answer = [Yy]* ]]; then
 else
     echo "Execução do script de seed ignorada."
 fi
+
+echo "Abrindo portal http://localhost:3000"
+google-chrome http://localhost:3000
